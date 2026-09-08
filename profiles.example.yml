@@ -1,0 +1,19 @@
+# Copy to profiles.yml and set `server` / `database` for your own Fabric warehouse.
+# profiles.yml is gitignored. Secrets are read from .env via env_var() - never inline them.
+walmart_fabric:
+  target: fabric
+  threads: 4
+  outputs:
+    fabric:
+      type: fabric
+      driver: 'ODBC Driver 18 for SQL Server'
+      server: <your-warehouse-id>.datawarehouse.fabric.microsoft.com
+      port: 1433
+      database: SilverWarehouse
+      schema: silver
+      authentication: ServicePrincipal
+      tenant_id: "{{ env_var('AZURE_TENANT_ID') }}"
+      client_id: "{{ env_var('AZURE_CLIENT_ID') }}"
+      client_secret: "{{ env_var('AZURE_CLIENT_SECRET') }}"
+      encrypt: true
+      trust_cert: false

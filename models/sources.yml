@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: bronze
+    database: Postgres_LH
+    schema: dbo
+    tables:
+      - name: bronze_customers
+      - name: bronze_employees
+      - name: bronze_order_items
+      - name: bronze_orders
+      - name: bronze_products
+      - name: bronze_stores

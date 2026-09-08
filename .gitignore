@@ -1,0 +1,40 @@
+# ---- Secrets & credentials (NEVER commit) ----
+.env
+.env.*
+!.env.example
+.envrc
+profiles.yml
+.user.yml
+
+# VS Code settings hold dbt.environmentVariables with live credentials.
+# A sanitised template is committed as .vscode/settings.example.json instead.
+.vscode/*
+!.vscode/settings.example.json
+
+# ---- dbt build artifacts ----
+target/
+dbt_packages/
+logs/
+*.log
+
+# Stale pre-flatten build output; safe to delete locally.
+walmart_T3/
+
+# ---- Python / uv ----
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.venv/
+
+# ---- Editor / OS ----
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Scratch outputs unrelated to this project (kept locally, not published).
+Claude outputs/

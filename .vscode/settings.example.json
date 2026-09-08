@@ -1,0 +1,11 @@
+{
+  "files.associations": { "*.sql": "jinja-sql" },
+  "python.defaultInterpreterPath": ".venv/Scripts/python.exe",
+  "dbt.dbtIntegration": "core",
+  "files.exclude": {
+    "**/target": true,
+    "**/dbt_packages": true,
+    "**/logs": true,
+    "**/__pycache__": true
+  }
+}
